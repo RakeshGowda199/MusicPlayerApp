@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_plyer_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_prompt_layout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_song_image_bottom"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/hiclipart_com"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_prompt_next_song"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_skip_next_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageView
+            android:id="@+id/iv_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pause_arrow"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="331dp" />
+
+
+     <!--   <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/album_art"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_pause_24dp"
+            app:border_color="@color/color_white"
+            app:border_width="2dp"
+            app:centercircle_diammterer="1"
+            app:draw_anticlockwise="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:progress_color="@color/colorPrimaryDark"
+            app:progress_startAngle="90" />
+-->
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progress_song"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cpb_background_progressbar_color="@color/colorPrimary"
+            app:cpb_background_progressbar_width="2dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="#3f51b5"
+            app:cpb_progressbar_width="2dp"
+            app:cpb_round_border="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:progress_color="@color/colorPrimaryDark"
+            android:background="@drawable/ic_pause_24dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_song_player_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
+            android:text="Love To Dance"
+            android:theme="@style/bottom_notify"
+            app:layout_constraintEnd_toStartOf="@+id/progress_song"
+            app:layout_constraintStart_toEndOf="@+id/iv_song_image_bottom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_song_subtitle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Laove To Dance"
+            android:textAlignment="textStart"
+            android:theme="@style/bottom_notify_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/progress_song"
+            app:layout_constraintStart_toEndOf="@+id/iv_song_image_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/tv_song_player_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

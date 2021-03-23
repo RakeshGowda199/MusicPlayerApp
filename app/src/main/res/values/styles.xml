@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="adpter">
+        <item name="android:textColor" > @color/colorPrimaryDark</item>
+        <item name="android:background" >@android:color/transparent</item>
+        <item name="android:textStyle" > normal</item>
+    </style>
+    <style name="bottom_notify">
+        <item name="android:textColor" >@color/colorPrimary</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle" > bold</item>
+    </style>
+    <style name="bottom_notify_text">
+        <item name="android:textColor" >@color/colorPrimary</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle" > normal</item>
+    </style>
+    <style name="fornt_text_title">
+        <item name="android:textColor" >@color/colorPrimary</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:textStyle" > bold</item>
+    </style>
+    <style name="fornt_text_sub_title">
+        <item name="android:textColor" >@color/colorPrimary</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle" > normal</item>
+    </style>
+    <style name="bottom_notify_text_title">
+        <item name="android:textColor" >@color/cardview_dark_background</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle" > bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+     <style name="bottom_notify_text_sub_title">
+        <item name="android:textColor" >@color/light_black_text_color</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle" > normal</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="player_text_sub_title">
+        <item name="android:textColor" >@color/light_black_text_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle" > normal</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="player_text__title">
+        <item name="android:textColor" >@color/light_black_text_color</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle" > bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="toolbar_text__title">
+        <item name="android:textColor" >@color/colorPrimary</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle" > bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="player_activity">
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+    <style name="Player_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="EmirateNameStyle">
+        <item name="android:background">@drawable/bg_emirate_names</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_primary_variant"
+    tools:context=".Fragments.HomePlayerFragment"
+    android:id="@+id/scrollView2"
+
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+       <!-- <ImageView
+            android:id="@+id/iv_image_bg"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/multimedia_audio_player_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_song_image"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:background="@color/color_white"
+                android:src="@drawable/hiclipart_com"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="100dp"
+                tools:layout_conversion_absoluteWidth="120dp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:text="Love To Dance "
+                android:textAlignment="textEnd"
+                android:theme="@style/fornt_text_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_song_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <TextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="Good morning data data tada ghjhgkkjhkj"
+                android:textAlignment="textStart"
+                android:theme="@style/fornt_text_sub_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_song_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                />
+
+            <Button
+                android:id="@+id/btn_shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_background"
+                android:text="Shuffle"
+                android:visibility="invisible"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_title"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="88dp" />
+
+            <com.like.LikeButton
+                android:id="@+id/star_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:circle_end_color="@color/color_white"
+                app:icon_size="24dp"
+                app:icon_type="heart"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_shuffle"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toEndOf="@+id/btn_shuffle"
+                app:layout_constraintTop_toTopOf="@+id/btn_shuffle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_loop_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_sub_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_title"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <ImageView
+            android:id="@+id/iv_voulme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_volume_up_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toEndOf="@+id/tv_sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_title"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="389dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:thumbTint="@color/colorPrimaryDark"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:progressTint="@color/color_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_image_bg"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="393dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <ImageView
+            android:id="@+id/iv_next_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_next_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_play_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/iv_play_btn"
+            app:layout_constraintTop_toTopOf="@+id/iv_play_btn"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="275dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <ImageView
+            android:id="@+id/iv_play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_arrow_24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <ImageView
+            android:id="@+id/iv_previous_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_previous_24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_play_btn"
+            app:layout_constraintEnd_toStartOf="@+id/iv_play_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_play_btn"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_shuffle_24dp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView_song_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_image_bg"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="161dp"
+            tools:layout_editor_absoluteX="317dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_edge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_layout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="@color/design_default_color_on_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_song_list"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@+id/include"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:listitem="@layout/adpater_nigth" />
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/botom_prompt_nigth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progressTint="@color/color_white"
+            android:rotation="270"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:thumbTint="@color/colorPrimaryDark"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/iv_voulme"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="0dp" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
